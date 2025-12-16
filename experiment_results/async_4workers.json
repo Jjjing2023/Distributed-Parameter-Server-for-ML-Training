@@ -1,0 +1,168 @@
+{
+  "experiment_name": "async_4workers",
+  "timestamp": "2025-12-09T10:12:11.833866",
+  "server_metrics": null,
+  "worker_metrics_aggregated": {
+    "num_workers": 4,
+    "total_training_time_seconds": 2212.65,
+    "average_epoch_time_seconds": 600,
+    "final_test_accuracy_percent": 4.7,
+    "total_local_steps": 1078,
+    "per_worker_metrics": [
+      {
+        "type": "WORKER_FINAL_METRICS",
+        "worker_id": 0,
+        "total_workers": 4,
+        "total_training_time_seconds": 1457.29,
+        "average_epoch_time_seconds": 602.46,
+        "epoch_times_seconds": [594.51, 610.41, 596.12],
+        "final_test_accuracy_percent": 4.21,
+        "all_accuracies_percent": [4.02, 4.21, 4.12],
+        "local_steps_completed": 196,
+        "batch_size": 128,
+        "learning_rate": 0.1,
+        "num_epochs": 3
+      },
+      {
+        "type": "WORKER_FINAL_METRICS",
+        "worker_id": 1,
+        "total_workers": 4,
+        "total_training_time_seconds": 2103.36,
+        "average_epoch_time_seconds": 594.27,
+        "epoch_times_seconds": [593.02, 595.28, 594.51],
+        "final_test_accuracy_percent": 3.58,
+        "all_accuracies_percent": [4.29, 4.12, 3.58],
+        "local_steps_completed": 294,
+        "batch_size": 128,
+        "learning_rate": 0.1,
+        "num_epochs": 3
+      },
+      {
+        "type": "WORKER_FINAL_METRICS",
+        "worker_id": 2,
+        "total_workers": 4,
+        "total_training_time_seconds": 2212.65,
+        "average_epoch_time_seconds": 606.87,
+        "epoch_times_seconds": [603.09, 611.62, 605.9],
+        "final_test_accuracy_percent": 5.52,
+        "all_accuracies_percent": [5.4, 5.08, 5.52],
+        "local_steps_completed": 294,
+        "batch_size": 128,
+        "learning_rate": 0.1,
+        "num_epochs": 3
+      },
+      {
+        "type": "WORKER_FINAL_METRICS",
+        "worker_id": 3,
+        "total_workers": 4,
+        "total_training_time_seconds": 2166.27,
+        "average_epoch_time_seconds": 596.02,
+        "epoch_times_seconds": [584.87, 607.45, 595.74],
+        "final_test_accuracy_percent": 5.24,
+        "all_accuracies_percent": [5.32, 5.25, 5.24],
+        "local_steps_completed": 294,
+        "batch_size": 128,
+        "learning_rate": 0.1,
+        "num_epochs": 3
+      }
+    ],
+    "epoch_times_by_epoch": [
+      {
+        "epoch": 1,
+        "max_time": 603.09,
+        "avg_time": 593.8725,
+        "min_time": 584.87
+      },
+      {
+        "epoch": 2,
+        "max_time": 611.62,
+        "avg_time": 606.19,
+        "min_time": 595.28
+      },
+      {
+        "epoch": 3,
+        "max_time": 605.9,
+        "avg_time": 598.7166666666667,
+        "min_time": 594.51
+      }
+    ],
+    "accuracy_by_epoch": [
+      {
+        "epoch": 1,
+        "avg_accuracy": 4.7575,
+        "max_accuracy": 5.4,
+        "min_accuracy": 4.02
+      },
+      {
+        "epoch": 2,
+        "avg_accuracy": 4.665,
+        "max_accuracy": 5.25,
+        "min_accuracy": 4.12
+      },
+      {
+        "epoch": 3,
+        "avg_accuracy": 4.78,
+        "max_accuracy": 5.52,
+        "min_accuracy": 3.58
+      }
+    ]
+  },
+  "raw_worker_metrics": [
+    {
+      "type": "WORKER_FINAL_METRICS",
+      "worker_id": 0,
+      "total_workers": 4,
+      "total_training_time_seconds": 1457.29,
+      "average_epoch_time_seconds": 602.46,
+      "epoch_times_seconds": [594.51, 610.41],
+      "final_test_accuracy_percent": 4.21,
+      "all_accuracies_percent": [4.02, 4.21],
+      "local_steps_completed": 196,
+      "batch_size": 128,
+      "learning_rate": 0.1,
+      "num_epochs": 3
+    },
+    {
+      "type": "WORKER_FINAL_METRICS",
+      "worker_id": 1,
+      "total_workers": 4,
+      "total_training_time_seconds": 2103.36,
+      "average_epoch_time_seconds": 594.27,
+      "epoch_times_seconds": [593.02, 595.28, 594.51],
+      "final_test_accuracy_percent": 3.58,
+      "all_accuracies_percent": [4.29, 4.12, 3.58],
+      "local_steps_completed": 294,
+      "batch_size": 128,
+      "learning_rate": 0.1,
+      "num_epochs": 3
+    },
+    {
+      "type": "WORKER_FINAL_METRICS",
+      "worker_id": 2,
+      "total_workers": 4,
+      "total_training_time_seconds": 2212.65,
+      "average_epoch_time_seconds": 606.87,
+      "epoch_times_seconds": [603.09, 611.62, 605.9],
+      "final_test_accuracy_percent": 5.52,
+      "all_accuracies_percent": [5.4, 5.08, 5.52],
+      "local_steps_completed": 294,
+      "batch_size": 128,
+      "learning_rate": 0.1,
+      "num_epochs": 3
+    },
+    {
+      "type": "WORKER_FINAL_METRICS",
+      "worker_id": 3,
+      "total_workers": 4,
+      "total_training_time_seconds": 2166.27,
+      "average_epoch_time_seconds": 596.02,
+      "epoch_times_seconds": [584.87, 607.45, 595.74],
+      "final_test_accuracy_percent": 5.24,
+      "all_accuracies_percent": [5.32, 5.25, 5.24],
+      "local_steps_completed": 294,
+      "batch_size": 128,
+      "learning_rate": 0.1,
+      "num_epochs": 3
+    }
+  ]
+}

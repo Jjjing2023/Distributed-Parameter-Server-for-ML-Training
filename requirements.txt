@@ -1,0 +1,8 @@
+torch>=1.9.0
+torchvision>=0.10.0
+numpy
+matplotlib
+tensorboard
+grpcio>=1.40.0
+grpcio-tools>=1.40.0
+protobuf>=3.19.0

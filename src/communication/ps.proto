@@ -1,0 +1,62 @@
+syntax = "proto3";
+
+// ParameterServer (PS)
+service ParameterServer {
+
+    // Worker ac
+    // PS can return a unique worker_id and total worker numbers
+    rpc RegisterWorker(RegisterRequest) returns (RegisterReply);
+
+    // Worker push gradients,
+    // This is the key of E2, and will be blocked under sync.
+    rpc PushGradrients(PushRequest) returns (PushReply);
+
+    // Worker pull the most recent parameters
+    rpc FetchParameters(FetchRequest) returns (FetchReply);
+
+    // worker reply all job finished 
+    rpc JobFinished(JobFinishedRequest) returns (JobFinishedReply);
+}
+
+// --- Worker Register ---
+message RegisterRequest {
+    string worker_ip = 1; // Worker info for log
+}
+message RegisterReply {
+    int32 worker_id = 1;         // the unique id assign to each work
+    int32 total_workers = 2;   // total works
+}
+
+// --- PushGradients (for test E2) ---
+message PushRequest {
+    int32 worker_id = 1;
+    
+    // 使用我们讨论的 Numpy + bytes 序列化方法
+    bytes gradients = 2; // 序列化后的 "梯度字典"
+    
+    int32 local_step = 3;  // Worker 的本地步数
+}
+
+message PushReply {
+    // for Sync： return 'true' showing received, please wait or released
+    // for ASync：return 'true' showing received and applied
+    bool received = 1; 
+}
+
+// --- pull Parameters ---
+message FetchRequest {
+    int32 worker_id = 1;
+}
+message FetchReply {
+    // parameters after serelization
+    bytes parameters = 1;
+    int32 global_step = 2; // Current version of global steps (对 E2 的 staleness 很重要)
+}
+
+// --- Job finished  ---
+message JobFinishedRequest {
+    int32 worker_id = 1;
+}
+message JobFinishedReply {
+    string message = 1; // "received"
+}

@@ -1,0 +1,10 @@
+# Requirements for experiment analysis scripts
+
+# Visualization
+matplotlib>=3.5.0
+numpy>=1.21.0
+
+# AWS CLI should be installed separately:
+# - macOS: brew install awscli
+# - Linux: apt-get install awscli or pip install awscli
+# - Windows: Download from AWS website
