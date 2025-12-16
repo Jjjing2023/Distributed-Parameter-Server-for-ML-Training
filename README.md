@@ -609,7 +609,7 @@ protobuf
 
 This is a course project for **CS6650: Building Scalable Distributed Systems** (Fall 2025).
 
-Team Members: [Your Names]
+Team Members: Tianjing Liu, Daisy Ding, Xiaoti Hu
 
 ---
 
